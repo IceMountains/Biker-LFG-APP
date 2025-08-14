@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { User, Motorcycle, MapPin, Star, Award, Edit, Plus, Settings } from 'lucide-react'
+import { User, Bike, MapPin, Star, Award, Edit, Plus, Settings } from 'lucide-react'
 import { Rider, RidingStyle, SkillLevel, BikeType } from '@/types'
 import EditProfileModal from '@/components/EditProfileModal'
 import AddBikeModal from '@/components/AddBikeModal'
@@ -184,7 +184,7 @@ export default function ProfilePage() {
                 <div key={bike.id} className="border border-gray-200 rounded-lg p-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-16 h-16 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
-                      <Motorcycle className="h-8 w-8 text-gray-600" />
+                      <Bike className="h-8 w-8 text-gray-600" />
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-gray-900">
@@ -253,7 +253,7 @@ export default function ProfilePage() {
           <div className="space-y-4">
             <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
               <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                <Motorcycle className="h-5 w-5 text-primary-600" />
+                <Bike className="h-5 w-5 text-primary-600" />
               </div>
               <div className="flex-1">
                 <p className="font-medium text-gray-900">Joined "Sunday Morning Cruise"</p>

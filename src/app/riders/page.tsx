@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Users, MapPin, Motorcycle, Search, Filter, Star } from 'lucide-react'
+import { Users, MapPin, Bike, Search, Filter, Star } from 'lucide-react'
 import { Rider, RidingStyle, BikeType, SkillLevel } from '@/types'
 import RiderCard from '@/components/RiderCard'
 

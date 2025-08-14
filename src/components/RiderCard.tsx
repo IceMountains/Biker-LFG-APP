@@ -1,6 +1,6 @@
 'use client'
 
-import { Motorcycle, MapPin, Star, Users, Award } from 'lucide-react'
+import { Bike, MapPin, Star, Users, Award } from 'lucide-react'
 import { Rider, RidingStyle, SkillLevel } from '@/types'
 
 interface RiderCardProps {
@@ -37,7 +37,7 @@ export default function RiderCard({ rider, onConnect }: RiderCardProps) {
               className="w-16 h-16 rounded-full object-cover"
             />
           ) : (
-            <Motorcycle className="h-8 w-8 text-primary-600" />
+            <Bike className="h-8 w-8 text-primary-600" />
           )}
         </div>
         <div className="flex-1 min-w-0">
@@ -85,7 +85,7 @@ export default function RiderCard({ rider, onConnect }: RiderCardProps) {
           {rider.bikes.map((bike) => (
             <div key={bike.id} className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
               <div className="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">
-                <Motorcycle className="h-4 w-4 text-gray-600" />
+                <Bike className="h-4 w-4 text-gray-600" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate">

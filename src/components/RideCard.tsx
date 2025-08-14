@@ -1,6 +1,6 @@
 'use client'
 
-import { Motorcycle, MapPin, Calendar, Users, Clock } from 'lucide-react'
+import { Bike, MapPin, Calendar, Users, Clock } from 'lucide-react'
 import { Ride, RideType, SkillLevel } from '@/types'
 import { format } from 'date-fns'
 
@@ -75,7 +75,7 @@ export default function RideCard({ ride, onJoin }: RideCardProps) {
       {/* Organizer */}
       <div className="flex items-center mb-4 p-3 bg-gray-50 rounded-lg">
         <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-3">
-          <Motorcycle className="h-4 w-4 text-primary-600" />
+          <Bike className="h-4 w-4 text-primary-600" />
         </div>
         <div>
           <p className="text-sm font-medium text-gray-900">Organized by {ride.organizer.name}</p>
