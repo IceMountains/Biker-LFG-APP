@@ -26,7 +26,7 @@ const skillLevelColors = {
 }
 
 export default function RideCard({ ride, onJoin }: RideCardProps) {
-  const isFull = ride.maxRiders && ride.currentRiders.length >= ride.maxRiders
+  const isFull = ride.maxRiders ? ride.currentRiders.length >= ride.maxRiders : false
   const spotsLeft = ride.maxRiders ? ride.maxRiders - ride.currentRiders.length : null
 
   return (
