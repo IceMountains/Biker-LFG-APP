@@ -3,9 +3,20 @@
 import { useState } from 'react'
 import { Bike, MapPin, Users, Calendar, Star, Route } from 'lucide-react'
 import Link from 'next/link'
+import CreateRideModal from '@/components/CreateRideModal'
+import { CreateRideData } from '@/types'
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState('rides')
+  const [showCreateRideModal, setShowCreateRideModal] = useState(false)
+
+  const handleCreateRide = (data: CreateRideData) => {
+    console.log('Creating ride:', data)
+    // Here you would typically save the ride data to your backend
+    // For now, we'll just log it and close the modal
+    setShowCreateRideModal(false)
+    // You could add a success message here
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -46,7 +57,10 @@ export default function HomePage() {
             Your next adventure is just a tap away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary text-lg px-8 py-3">
+            <button 
+              onClick={() => setShowCreateRideModal(true)}
+              className="btn-primary text-lg px-8 py-3"
+            >
               Create a Ride
             </button>
             <button className="btn-secondary text-lg px-8 py-3">
@@ -108,7 +122,12 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-semibold text-gray-900 mb-2">Plan a Ride</h4>
               <p className="text-gray-600 mb-4">Create a ride invitation with date, time, and location</p>
-              <button className="btn-primary">Start Planning</button>
+              <button 
+                onClick={() => setShowCreateRideModal(true)}
+                className="btn-primary"
+              >
+                Start Planning
+              </button>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -142,6 +161,14 @@ export default function HomePage() {
           </p>
         </div>
       </footer>
+
+      {/* Create Ride Modal */}
+      {showCreateRideModal && (
+        <CreateRideModal
+          onClose={() => setShowCreateRideModal(false)}
+          onSubmit={handleCreateRide}
+        />
+      )}
     </div>
   )
 } 
